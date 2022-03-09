@@ -11,7 +11,9 @@
 //  - Render texture on quad
 //  - Do some particle effect using shaders at cursor
 
-int main() {
+//int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
+int main(void)
+{
     GLFWwindow* window;
     int success = 0;
 
