@@ -4,12 +4,18 @@
 #include <glad/glad.h>
 //#include "3rdparty/glad/include/glad.h"
 #include <iostream>
+#include "color.h"
 
 // TODO
 //  - Install glad
 //  - Render quad
 //  - Render texture on quad
 //  - Do some particle effect using shaders at cursor
+
+void clear_screen(color c) {
+    glClearColor(c.r, c.g, c.b, c.a);
+    glClear(GL_COLOR_BUFFER_BIT);
+}
 
 int main() {
     GLFWwindow* window;
@@ -21,7 +27,7 @@ int main() {
         std::cout << "GLFW failed to init" << std::endl;
     }
 
-    window = glfwCreateWindow(1920, 1080, "Game test", NULL, NULL);
+    window = glfwCreateWindow(1920, 1080, "editor", NULL, NULL);
     if (!window)
     {
         std::cout << "GLFW failed create window" << std::endl;
@@ -34,8 +40,8 @@ int main() {
         return -1;
     }
 
-    while (!glfwWindowShouldClose(window)){
-        glClear(GL_COLOR_BUFFER_BIT);
+    while (!glfwWindowShouldClose(window)) {
+        clear_screen(color());
         glfwSwapBuffers(window);
         glfwPollEvents();
     }

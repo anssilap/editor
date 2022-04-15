@@ -21,7 +21,7 @@ int main() {
         std::cout << "GLFW failed to init" << std::endl;
     }
 
-    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    window = glfwCreateWindow(640, 480, "Editor", NULL, NULL);
     if (!window)
     {
         std::cout << "GLFW failed create window" << std::endl;
