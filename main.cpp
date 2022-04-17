@@ -41,7 +41,7 @@ int main() {
     }
 
     while (!glfwWindowShouldClose(window)) {
-        clear_screen(color());
+        clear_screen(color_with_full_alpha_from_int(colors::cornflower_blue));
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
